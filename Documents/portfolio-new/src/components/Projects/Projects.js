@@ -32,9 +32,9 @@ const Projects = () => {
                         imgPath={tarot}
                         isBlog={false}
                         title="Tarot Turnera"
-                        description="Landing de 3 secciones con toda la informacion necesaria para sentirte seguro de contratar sus servicios. Construida con React, Javascript, Bootstrap, CSS."
+                        description="Landing base con la informacion completa de todos los servicios que brinda la especilista. Formulario para sacar turnos, confirmacion del mismo via mail."
                         ghLink="https://github.com/caroescalante/RV-WebC"
-                        demoLink="https://rv-web-c.vercel.app/"              
+                        // demoLink="https://rv-web-c.vercel.app/"              
                         />
                     </Col>
 
