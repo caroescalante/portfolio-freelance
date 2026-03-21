@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  background-color: #efe9e7;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* PORT */
+.hero-port {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  font-size: 16vw;
+  color: #dd73a1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 610;
+  text-shadow: 
+    10px 0px 0px #eac9d4,
+    20px 0 0 #eac9d4;
+  z-index: 1;
+}
+
+/* FOLIO */
+.hero-folio {
+  position: relative;
+  top: 25%;
+  left: 20%;
+  font-size: 19vw;
+  font-family: 'Anton', sans-serif;
+  color: #efb7ce;
+  text-shadow: 22px 0px 0px rgba(239, 211, 220, 0.5);
+  z-index: 1;
+}
+
+/* CONTENIDO */
+.hero-content {
+  position: relative;
+  top: -10%;
+  left: 61%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: left;
+}
+
+/* ROL */
+.hero-role {
+  font-size: 3.2rem;
+  position: relative;
+  color: #e1dbd9;
+  margin-bottom: 20px;
+  top: 8%;
+  font-weight: 610;
+  letter-spacing: 3px;
+}
+
+/* NOMBRE */
+.hero-name {
+  line-height: 0.9;
+}
+
+
+.name-carolina {
+  font-family: 'Poppins', sans-serif; /* reemplazo de Glacial */
+  font-size: 4rem;
+  color: #000;
+}
+
+@font-face {
+  font-family: 'Parfumerie';
+  src: url('../../Fonts/parfumerie-script-regular.otf') format('truetype');
+}
+
+.name-escalante {
+  font-family: 'Parfumerie';
+  font-size: 8rem;
+  color: #000;
+  margin-left: 9%; 
+}
+
+/* IMAGEN */
+.hero-image {
+  position: absolute;
+  top: 12%;
+  left: 63%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.hero-image img {
+  width: 600px;
+  max-width: 120%;
+}
+
+/* BOTON */
+.btn-conoceme-container {
+  position: absolute;
+  bottom: 60px;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.btn-conoceme {
+  background-color: #ff66c4;
+  color: #ffffff;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-conoceme:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 TABLET */
+@media (max-width: 1024px) {
+
+  .hero-content {
+    left: 55%;
+  }
+
+  .hero-image img {
+    width: 400px;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .hero-port {
+    top: 10%;
+    left: 5%;
+    font-size: 20vw;
+  }
+
+  .hero-folio {
+    top: 28%;
+    left: 10%;
+    font-size: 16vw;
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+  }
+
+  .name-carolina,
+  .name-escalante {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 300px;
+  }
+
+  .btn-conoceme-container {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-top: 30px;
+    text-align: center;
+  }
+}

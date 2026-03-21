@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'TT Fors Trial Regular';
+  src: url('../../Fonts/TT\ Fors\ Trial\ Regular.ttf') format('truetype');
+}
+
+.contact-section {
+  padding: 80px 0;
+   font-family: 'TT Fors Trial Regular', sans-serif;
+   background-color: #efe9e7;
+}
+
+.mono-icon {
+    width: 40px; 
+    height: 40px;
+}
+
+@font-face {
+  font-family: 'Hagrid-Regular-trial';
+  src: url('../../Fonts/Hagrid-Regular-trial.ttf') format('truetype');
+}
+
+.title-contacto {
+    font-family: 'Hagrid-Regular-trial', bold;
+    font-size: 50px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.info-contact {
+    font-family: 'TT Fors Trial Regular', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 10%;
+}
