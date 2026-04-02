@@ -10,9 +10,11 @@ const Home = () => {
         web designer and developer
       </h2>
 
-      <h1 className="hero-port">PORT</h1>
-      <br /><br />
-      <h1 className="hero-folio">FOLIO</h1>
+      <div className="hero-title">
+        <span className="hero-port">PORT</span>
+        <br/>
+        <span className="hero-folio">FOLIO</span>
+      </div>
 
 
       <div className="hero-image">

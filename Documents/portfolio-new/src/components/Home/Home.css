@@ -1,45 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+body, html {
+  overflow-x: hidden;
+}
+
 .home-section {
-  position: relative;
+  /* position: relative; */
   height: 100vh;
   background-color: #efe9e7;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
-/* PORT */
-.hero-port {
+.hero-title {
   position: absolute;
-  top: 15%;
-  left: 10%;
+  z-index: 1;
+  line-height: 0.8;
+  padding-top: 2%;
+}
+
+.hero-port {
+  display: block;
   font-size: 16vw;
   color: #dd73a1;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 610;
+  font-weight: 700;
   text-shadow: 
     10px 0px 0px #eac9d4,
     20px 0 0 #eac9d4;
-  z-index: 1;
+  margin-top: 7%;
+  margin-left: 23%;
+
 }
 
-/* FOLIO */
 .hero-folio {
-  position: relative;
-  top: 25%;
-  left: 20%;
-  font-size: 19vw;
+  /* display: block; */
+  font-size: 18vw;
   font-family: 'Anton', sans-serif;
   color: #efb7ce;
-  text-shadow: 22px 0px 0px rgba(239, 211, 220, 0.5);
-  z-index: 1;
+  text-shadow: 20px 0px 0px rgba(239, 211, 220, 0.5);
+  margin-left: 117%;
+  margin-top: 26%;
 }
 
 /* CONTENIDO */
 .hero-content {
-  position: relative;
-  top: -10%;
-  left: 61%;
+  position: absolute;
+  top: 60%;
+  left: 21%;
   transform: translateX(-50%);
   z-index: 3;
   text-align: left;
@@ -77,22 +84,23 @@
   font-family: 'Parfumerie';
   font-size: 8rem;
   color: #000;
-  margin-left: 9%; 
+  margin-left: 50%; 
 }
 
 /* IMAGEN */
 .hero-image {
   position: absolute;
-  top: 12%;
-  left: 63%;
+  top: 11%;
+  left: 62%;
   transform: translateX(-50%);
   z-index: 0;
 }
 
 .hero-image img {
-  width: 600px;
-  max-width: 120%;
-}
+    width: 107%;
+    max-width: 800px;
+    height: auto;
+  }
 
 /* BOTON */
 .btn-conoceme-container {
@@ -126,24 +134,35 @@
     left: 55%;
   }
 
-  .hero-image img {
+  /* .hero-image img {
     width: 400px;
-  }
+  } */
 }
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 
+  .hero-title {
+    position: relative;
+    /* top: auto; */
+    /* left: auto; */
+    text-align: center;
+    margin-top: 40px;
+  }
+
   .hero-port {
     top: 10%;
     left: 5%;
-    font-size: 20vw;
+    font-size: 30vw;
+    padding-top: 3%;
   }
 
   .hero-folio {
-    top: 28%;
-    left: 10%;
-    font-size: 16vw;
+    /* top: 28%; */
+    /* left: -10%; */
+    font-size: 2vw;
+    margin-left: -117%;
+     margin-top: 26%;
   }
 
   .hero-content {
@@ -156,7 +175,8 @@
   }
 
   .hero-role {
-    font-size: 1rem;
+    font-size: 0.5rem;
+     padding-top: 3%;
   }
 
   .name-carolina,
@@ -168,7 +188,7 @@
     position: relative;
     left: auto;
     transform: none;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     text-align: center;
   }
 
