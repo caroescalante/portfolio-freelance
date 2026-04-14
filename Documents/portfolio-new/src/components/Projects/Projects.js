@@ -31,10 +31,11 @@ const Projects = () => {
                         <ProjectCard
                         imgPath={tarot}
                         isBlog={false}
-                        title="Tarot Turnera"
-                        description="Landing base con la informacion completa de todos los servicios que brinda la especilista. Formulario para sacar turnos, confirmacion del mismo via mail."
-                        ghLink="https://github.com/caroescalante/RV-WebC"
-                        // demoLink="https://rv-web-c.vercel.app/"              
+                        title="Tarot Landing"
+                        description="Landing base con la informacion completa de todos los servicios que brinda la especilista. 
+                            Formulario para sacar turnos, redireccionamiento directo a Whatsapp."
+                        ghLink="https://github.com/caroescalante/tarot-web"
+                        demoLink="https://tarot-web-alpha.vercel.app/"              
                         />
                     </Col>
 
