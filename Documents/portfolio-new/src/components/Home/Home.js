@@ -1,13 +1,19 @@
 import React from 'react';
-import '../Home/Home.css';
+import '../Home/Home.css';import { useLanguage } from "../LanguageContext";
+import translations from "../translations";
 import compu from "../../Assets/computadora_home.png";
 
+
 const Home = () => {
+
+  const { language } = useLanguage();
+  const t = translations[language].home;
+ 
   return (
     <section className="home-section" id="home">
 
       <h2 className="hero-role">
-        web designer and developer
+        data engineer and solutions architect
       </h2>
 
       <div className="hero-title">
@@ -39,7 +45,7 @@ const Home = () => {
             });
           }}
         >
-          CONOCEME
+          {t.cta}
         </button>
       </div>
 

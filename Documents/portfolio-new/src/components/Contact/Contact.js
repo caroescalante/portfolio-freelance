@@ -1,39 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaWhatsapp, FaLinkedin, FaInstagram, FaRegEnvelope } from "react-icons/fa";
+import { useLanguage } from "../LanguageContext";
+import translations from "../translations";
 import './Contact.css';
-import mono from "../../Assets/mono.png";
+
+const EMAIL = "cm.escalante59@gmail.com";
 
 const Contact = () => {
+    const { language } = useLanguage();
+    const t = translations[language].contact;
+    const [copied, setCopied] = useState(false);
+
+    const handleEmailClick = (e) => {
+        e.preventDefault();
+
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(EMAIL).then(() => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+            });
+        }
+
+        window.location.href = `mailto:${EMAIL}`;
+    };
+
     return (
         <section className="contact-section" id="contacto">
-           <br /><br />
+            <br /><br />
             <h1 className="title-contacto">
-                <img src={mono} alt="mono" className="mono-icon" />
-                    Trabajamos juntos?
-                <img src={mono} alt="mono" className="mono-icon" />
+                {t.title}
             </h1>
-            < br />< br />
+            <br />
 
             <p className="info-contact">
-                Todas tus ideas de diseño y estetica de tu marca se van a ver plasmadas en tu sitio Web 
+                {t.p1_pre}<strong>{t.p1_role1}</strong>{t.p1_mid}<strong>{t.p1_role2}</strong>{t.p1_post}
             </p>
             <p className="info-contact">
-                Pedime un presupuesto sin compromiso, y te voy a estar respondiendo a la brevedad!
+                {t.p2}
             </p>
 
-            <br/>
+            <br />
 
-            <p className="info-contact">
-                Whatsapp: +54 9 11 3946 7266
-            </p>
-            <p className="info-contact">
-                Email: cm.escalante59@gmail.com 
-            </p>
-            <p className="info-contact">
-                Linkedln: <a href="https://www.linkedin.com/in/carolina-escalante-548888201" target="_blank" rel="noopener noreferrer">Carolina Escalante</a>
-            </p>
-            <p className="info-contact">
-                Instagram: @_caroescalante_
-            </p>
+            <div className="contact-cards">
+                <a
+                    className="contact-card"
+                    href="https://wa.me/5491139467266"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaWhatsapp className="contact-icon" />
+                    <span>{t.whatsapp}</span>
+                </a>
+
+                <button className="contact-card contact-card-button" onClick={handleEmailClick}>
+                    <FaRegEnvelope className="contact-icon" />
+                    <span>{copied ? t.emailCopied : t.email}</span>
+                </button>
+
+                <a
+                    className="contact-card"
+                    href="https://www.linkedin.com/in/carolina-escalante-548888201"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaLinkedin className="contact-icon" />
+                    <span>{t.linkedin}</span>
+                </a>
+
+                <a
+                    className="contact-card"
+                    href="https://www.instagram.com/_caroescalante_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaInstagram className="contact-icon" />
+                    <span>{t.instagram}</span>
+                </a>
+            </div>
         </section>
     );
 }

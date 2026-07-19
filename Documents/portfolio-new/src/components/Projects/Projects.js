@@ -6,12 +6,17 @@ import rv from "../../Assets/rv_landing.png";
 import tarot from "../../Assets/tarot_landing.png";
 import { Col, Row, Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards.js";
+import { useLanguage } from "../LanguageContext";
+import translations from "../translations.js";
 
 const Projects = () => {
+    const { language } = useLanguage();
+    const t = translations[language].projects;
+
     return (
         <section className="projects-section" id="projects">
             <br /><br /><br />
-            <h1 className='title'> Algunos de mis trabajos ...</h1>
+            <h1 className='title'> {t.heading}</h1>
 
             <div>
                 <Container>
@@ -20,8 +25,8 @@ const Projects = () => {
                         <ProjectCard
                         imgPath={rv}
                         isBlog={false}
-                        title="RV SOLUTIONS Landing"
-                        description="Landing de 3 secciones diseñada y pensada para darle al usuario una introduccion a la empresa, y sentido de confianza para contratar sus servicios."
+                        title={t.items.rv.title}
+                        description={t.items.rv.description}
                         ghLink="https://github.com/caroescalante/RV-WebC"
                         demoLink="https://rv-web-c.vercel.app/"              
                         />
@@ -31,9 +36,8 @@ const Projects = () => {
                         <ProjectCard
                         imgPath={tarot}
                         isBlog={false}
-                        title="Tarot Landing"
-                        description="Landing base con la informacion completa de todos los servicios que brinda la especilista. 
-                            Formulario para sacar turnos, redireccionamiento directo a Whatsapp."
+                        title={t.items.tarot.title}
+                        description={t.items.tarot.description}
                         ghLink="https://github.com/caroescalante/tarot-web"
                         demoLink="https://tarot-web-alpha.vercel.app/"              
                         />
@@ -43,9 +47,8 @@ const Projects = () => {
                         <ProjectCard
                         imgPath={henryGameZone}
                         isBlog={false}
-                        title="Henry Game-Zone"
-                        description="E-commerce de videojuegos, medios de pago integrados, cards individuales con descripcion y video trailer,
-                         carrito de compras, favoritos, perfil personalizable y más!"
+                        title={t.items.gamezone.title}
+                        description={t.items.gamezone.description}
                         ghLink="https://github.com/caroescalante/PF-Henry-GameZone-1"
                         demoLink="https://pf-henry-game-zone-1.vercel.app/"
                         />
@@ -55,10 +58,8 @@ const Projects = () => {
                         <ProjectCard
                         imgPath={pokemons}
                         isBlog={false}
-                        title="Pokemons"
-                        description="Web donde podrás crear tu propio pokemon, asignarlo a una casa,
-                            ver el detalle, editarlos, eliminarlos, filtrarlos 
-                            y navegar a traves de todas las casas."
+                        title={t.items.pokemons.title}
+                        description={t.items.pokemons.description}
                         ghLink="https://github.com/caroescalante/PI-Pokemons"
                         demoLink="https://pi-pokemons-rose.vercel.app/"
                         />

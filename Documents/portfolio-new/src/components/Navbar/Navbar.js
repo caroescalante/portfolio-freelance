@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-// import logo from '../Assets/landing_1.jpg'
+import { useLanguage } from '../LanguageContext'
+import translations from '../translations'
+import LanguageSwitch from '../LanguageSwitch/LanguageSwitch'
 import './Navbar.css'
 
 const Navbar = () => {
 
     const [click, setClick] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const { language } = useLanguage()
+    const t = translations[language].nav
 
     const handleClick = () => setClick(!click)
     const closeMenu = () => setClick(false)
 
-    // 👇 Detectar scroll
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -32,8 +35,7 @@ const Navbar = () => {
         <div className='header'>
             <nav className={scrolled ? "navbar active" : "navbar"}>
                 <a href='/' className='logo'>
-                    {/* <img src={logo} alt='logo' /> */}
-                    <span className="logo-text">Home</span>
+                    <span className="logo-text">{t.home}</span>
                 </a>
 
                 <div className='hamburger' onClick={handleClick}>
@@ -43,16 +45,22 @@ const Navbar = () => {
 
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-item'>
-                        <a href='#about' onClick={closeMenu}>Conoceme</a>
+                        <a href='#about' onClick={closeMenu}>{t.about}</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#projects' onClick={closeMenu}>Proyectos</a>
+                        <a href='#proceso' onClick={closeMenu}>{t.process}</a>
                     </li>
-                    {/* <li className='nav-item'>
-                        <a href='#servicios' onClick={closeMenu}>Servicios</a>
-                    </li> */}
                     <li className='nav-item'>
-                        <a href='#contacto' onClick={closeMenu}>Contacto</a>
+                        <a href='#resume' onClick={closeMenu}>{t.cv}</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#projects' onClick={closeMenu}>{t.projects}</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#contacto' onClick={closeMenu}>{t.contact}</a>
+                    </li>
+                    <li className='nav-item'>
+                        <LanguageSwitch />
                     </li>
                 </ul>
             </nav>
